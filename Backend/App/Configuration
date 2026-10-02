@@ -1,0 +1,17 @@
+from pydantic_settings import BaseSettings,SettingsConfigDict
+from functools import lru_cache
+
+class Settings(BaseSettings):
+    APP_NAME : str = 'CORPORATE FINANCE DECISION ENGINE'
+    DEBUG : bool = True
+    ENV: str = "development"    
+    DATABASE_URL : str = "Create your own"
+    GOOGLE_API_KEY: str = "Get from google api key website"
+    model_config = SettingsConfigDict(env_file=".env",extra='ignore')
+    JWT_SECRET_KEY: str = "Generate it"
+    JWT_ALGORITHM: str = ""
+    ACCESS_TOKEN_EXPIRE_MINUTES: int = 30
+
+@lru_cache
+def get_settings()->Settings:
+    return Settings()
