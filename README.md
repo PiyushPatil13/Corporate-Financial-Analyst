@@ -195,6 +195,10 @@ corp-finance-decision-engine/
 │       │   ├── user.py
 │       │   └── copilot_session.py
 │       │
+│       ├── schemas/
+│       │   ├── copilot_schema.py
+│       │   └── scenario_schema.py
+│       │
 │       ├── repositories/
 │       │   ├── base_repository.py
 │       │   ├── company_repository.py
@@ -215,17 +219,24 @@ corp-finance-decision-engine/
 │           ├── init_db.py
 │           └── migrations/
 │
+├── frontend/
+│   └── components/
+│       ├── capital_budget.py
+│       ├── copilot_workspace.py
+│       ├── executive_pulse.py
+│       ├── live_market.py
+│       ├── ratio_analytics.py
+│       ├── stress_monte_carlo.py
+│       └── wacc_optimizer.py
+│
+│
 ├── data/
 │   └── sample_statements/
 │       ├── test_balance_sheet_FY2025.xlsx
 │       ├── test_balance_sheet_FY2025.pdf
 │       └── test_balance_sheet_complete_FY2025.xlsx
 │
-├── frontend/
-│   └── components/
-│       └── charts.py
-│
-└── README.md
+
 ```
 
 ---
